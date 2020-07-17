@@ -1,4 +1,6 @@
-//이거슨 java췹스로 한 약수의 합....algorithmmmm
+package arimSeo;
+
+//공통문제1) 이거슨 java췹스로 한 약수의 합....algorithmmmm
 
 class Solution {
     public int solution(int n) {
