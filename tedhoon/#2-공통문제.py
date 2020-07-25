@@ -1,6 +1,27 @@
 from string import ascii_uppercase, ascii_lowercase
 
 def solution(s, n):
+    result_temp = ''
+    for i in s:
+        if i == ' ':
+            result_temp += ' '
+        else: 
+            target_case = ascii_uppercase*2 if i.isupper() else ascii_lowercase*2
+            result_temp += target_case[target_case.find(i) + n]
+    return result_temp
+
+
+'''
+문제를 잘 못 이해해서.. 무의미한 코드가 너무 많은 것 같아서 다시올립니다.
+위에가 다시 올린 것!
+밑에가 처음에 올린 것!
+'''
+
+
+
+from string import ascii_uppercase, ascii_lowercase
+
+def solution(s, n):
     result_temp_list = [] 
     input_value_list = s.split(' ') 
     for splited in input_value_list:
