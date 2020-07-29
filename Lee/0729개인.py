@@ -13,3 +13,4 @@ def solution(arr, divisor):
         # 아무것도 없다 = list길이가 0이다 이므로 이 경우 -1을 넣어준다
     return sorted(answer)
     # 숫자 배열에 맞춰서 return해야 하므로 sorted!
+    # 아주 쉬운 문제! 캡틴 죄송햡니다...완주하지 못한 선수 도저히 안됩니다... 쫌 더 연구를..
