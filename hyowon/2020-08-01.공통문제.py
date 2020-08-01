@@ -1,4 +1,4 @@
-def solution(arr, divisor):
+def solution(arr, divisor) :
     a = []
     for i in arr : 
         if i % divisor == 0 :
