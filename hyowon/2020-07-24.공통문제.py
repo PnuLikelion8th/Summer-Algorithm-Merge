@@ -1,10 +1,8 @@
+#list안해도됨(for문에서 순회하면서 하나씩 비교, str도 for문 순회) > 형변형과정(str>list>str)도필요x
+
 from string import ascii_lowercase,ascii_uppercase
 
 def solution(s, n):
-    # list_s = list(s)
-    # lowerlist = list(ascii_lowercase)
-    # upperlist = list(ascii_uppercase)
-    # c = [] 
     c = ''
     for letter in s:
         if letter in ascii_lowercase:
@@ -18,8 +16,23 @@ def solution(s, n):
         else :
             b = letter
             answer += b
-        # c.append(b)
-        # str_c = ''.join(c)
     return answer
 
-#list안해도됨(for문에서 순회하면서 하나씩 비교, str도 for문 순회) > 형변형과정(str>list>str)도필요x
+
+# def solurion(s, n):
+#     list_s = list(s)
+#     lowerlist = list(ascii_lowercase * 2)
+#     upperlist = list(ascii_uppercase * 2)
+#     c = []
+#     for letter in list_s:
+#         if letter in lowerlist:
+#             a = lowerlist.index(letter)
+#             b = lowerlist[a+n]
+#         elif letter in upperlist:
+#             a = upperlist.index(letter)
+#             b = upperlist[a+n]
+#         else :
+#             b = letter
+#         c.append(b)
+#         str_c = ''.join(c)
+#     return(str_c)
