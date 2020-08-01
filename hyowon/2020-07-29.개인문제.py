@@ -5,9 +5,7 @@ def solution(array, commands):
     answer = []
     for c in commands : 
         # commands의 원소c로 부터 i,j,k값 구하기
-        i = c[0] 
-        j = c[1]
-        k = c[2] 
+        i, j, k = c # i = c[0], j = c[1], k = c[2]
         # a = array[i-1:j] : 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고
         # a.sort() : 정렬했을 때
         # b = a[k-1] : k번째에 있는 수를
