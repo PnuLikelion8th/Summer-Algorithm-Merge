@@ -18,7 +18,6 @@ def solution(s, n):
             answer += b
     return answer
 
-
 # def solurion(s, n):
 #     list_s = list(s)
 #     lowerlist = list(ascii_lowercase * 2)
