@@ -30,3 +30,5 @@ def solution(numbers, hand):
         print("cur_left : ",cur_left, "cur_right : ", cur_right)
         print(answer)
     return answer
+
+#지난주에 개인문제까지 push해서 다시 push합니당
