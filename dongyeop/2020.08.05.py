@@ -11,7 +11,7 @@ def solution(participant, completion):
 
 print(solution(['leo','minsu','namin'],['minsu','namin']))
 
-def solution(participant, completion):
+ def solution(participant, completion):
     participant.sort()
     completion.sort()
     for i in range(len(completion)):
