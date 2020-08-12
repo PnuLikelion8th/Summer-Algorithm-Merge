@@ -6,24 +6,14 @@ class Solution {
         long answer = 0;
         int i;
         
-        for (i=a+1; i>a & i<b; i++) {
-            if(a< b) {
-
+        if(a< b) {
+          for (i=a+1; i>a & i<b; i++) {
               ans += i;
               //=0+4=4, =4+5=9 
               answer= ans+a+b;
-            }
-        } return answer;
-
-        for (i=b+1; i>b & i<a; i++) {
-        else if(a>b) {
-              ans += i;
-                 answer= ans+a+b;
-            }
-        } return answer;
-        
-        else 
-            return a;
+          } return answer;
+        }
+        elㅁ
    
         //또는 return b;
         
