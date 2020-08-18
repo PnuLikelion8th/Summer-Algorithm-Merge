@@ -22,6 +22,8 @@ def solution(participant, completion):
 # 문자열 다루기 기본
 # - s가 4or6 and 숫자로만구성 확인
 
+# Ver.1
+
 def solution(s):
     if len(s) != 4 and 6:
         return False
@@ -31,3 +33,14 @@ def solution(s):
         if c not in numlst:
             return False
     return True
+
+# Ver.2
+# .isdigit() : 숫자인지(True반환) 아닌지(Fasle반환)
+# .isalpha() : 알파벳인지 아닌지
+
+def solution(s):
+    if len(s) != 4 and 6:
+        return False
+    if s.isdigit():
+        return True
+    return False
