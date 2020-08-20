@@ -22,7 +22,9 @@ def solution(s, n):
 
 
 # Ver.2 - 겹치는 부분을 간결화할 수 있을 것 같아서 수정해봤습니다
-# find() vs index() : find는 값을 못 찾으면 -1 리턴, index는 ValueErorr
+# str.find() vs index() : find는 값을 못 찾으면 -1 리턴, index는 ValueErorr
+# - find() : str만 가능
+# - index(찾을값, 시작인덱스, 종료인덱스) : str, list 둘 다 가능
 from string import ascii_uppercase, ascii_lowercase
 
 def solution(s, n):
