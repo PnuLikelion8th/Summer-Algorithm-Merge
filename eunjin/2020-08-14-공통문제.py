@@ -1,5 +1,7 @@
 # 웹 크롤링 - 코로나 확진자 정보 가져와서 출력
 
+# Ver.1
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -28,3 +30,33 @@ for corona in corona_lists:
         
     print(corona.text, end=end)
     index+=1
+
+print()
+print()
+
+
+
+# Ver.2
+
+import requests
+from bs4 import BeautifulSoup
+
+# HTTP GET request
+req = requests.get('http://www.busan.go.kr/covid19/Corona19.do')
+# HTML 소스 가져오기
+html = req.text
+# bs4 이용하여, html소스->python객체 변환
+soup = BeautifulSoup(html, 'html.parser')
+# select : CSS selector를 이용하여, 조건과 일치하는 모든 객체를 list로 반환
+corona_lists = soup.select(
+    'div.corona_list > div.list_body > ul' # 확진자 한 명 정보 가져오기
+ )
+
+idx = 1
+for corona in corona_lists:
+    if corona.select('span')[1].string: # 중간에 '~~관련' 부분은 출력하지 않도록
+        print(f"{idx}) ", end='')
+        for cnt in range(4):
+            print(f"{corona.select('span')[cnt].string}", end=' / ')
+        print(f"{corona.select('span')[4].string}")
+        idx+=1
