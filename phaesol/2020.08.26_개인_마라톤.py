@@ -18,11 +18,11 @@
 
 def solution(participant, completion):
 
-        p =  sorted(participant)           #문자도 잘 정렬이 되네여 그래서 정렬먼저해줌
+        p =  sorted(participant)           #문자열 정렬
 
         c =  sorted (completion)
-        arr = p[1:len(p)-1]            # 나중에 else에서 쓸건데 첫과 끝 사이 값 리턴할거임. 
-        arr_1 = c[1:len(c)]            #completion의 숫자가 한명이 작으니 len에다가 1 안빼야함.
+        arr = p[1:len(p)]            # 나중에 else에서 쓸건데 첫과 끝 사이 값 리턴할 것
+        arr_1 = c[1:len(c)]            
                                         
 
 
@@ -39,7 +39,7 @@ def solution(participant, completion):
             return p[0]                  
                                         
         else:
-            for i in range(len(arr)):    # 문제는 이 곳. 첫 번째랑 마지막이 같다? -동명이인이 있다~
+            for i in range(len(arr)):    # 문제는 이 곳. 첫 번째랑 마지막이 같다? -동명이인이 있다
 
                 if arr[i] != arr_1[i]:   # 그래서 사이에 있는 값을 for문으로 차례대로 비교해서 그 순서에 서로 안맞는 값이 있다? 걔가 완주 못한거임.
                     return arr[i]
